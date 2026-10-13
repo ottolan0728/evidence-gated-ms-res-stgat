@@ -1,0 +1,19 @@
+stage: R3
+evidence_class: POST_REVIEW_CAPACITY_CONTROL
+outer_fold: 0
+seeds: [11, 22, 33, 44, 55]
+historical_decision: STOP-SUPERVISED-REDESIGN
+evaluate_test: false
+model:
+  reference: DASP
+  matched_control: MeanMean
+  matched_parameters: 69953
+common_endpoint:
+  macro_scenario_pr_auc: true
+  constrained_event_recall: true
+  threshold_candidates: 501
+  max_false_alarm_episodes_per_hour: 1.0
+  max_normal_alarm_duty: 0.01
+interpretation:
+  seeds_are_independent_samples: false
+  retroactive_promotion: false
