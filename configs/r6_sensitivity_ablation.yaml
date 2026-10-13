@@ -1,0 +1,23 @@
+stage: R6
+evidence_class: POST_REVIEW_SENSITIVITY
+outer_fold: 0
+seeds: [11, 22, 33, 44, 55]
+gate_sensitivity:
+  combinations: 750
+  pass: 120
+  fail: 630
+graph_sensitivity:
+  historical: "corr0.35 + stage constraint"
+  variants:
+    - "corr0.25 + stage constraint"
+    - "corr0.45 + stage constraint"
+    - "corr0.35 no stage constraint"
+component_ablation:
+  variants:
+    - "single-scale k=5"
+    - "no residual connection"
+    - "temporal-only / no GAT"
+evaluate_test: false
+interpretation:
+  sensitivity_is_retuning: false
+  retroactive_promotion: false
