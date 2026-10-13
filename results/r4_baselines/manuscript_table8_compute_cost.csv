@@ -1,0 +1,8 @@
+model,parameters,mean_training_time_s,median_inference_ms_per_window
+TCN,22273,377.4,0.071
+GATv2,17089,1268.5,0.116
+USAD,723271,2462.8,0.077
+Random Forest,,11.0,0.521
+Matched Mean/Mean,69953,2645.3,0.316
+DASP,69953,,
+Original Mean/Mean,32769,,
