@@ -1,0 +1,5 @@
+graph_variant,mean_pr_auc,worst_pr_auc,mean_event_recall,worst_event_recall
+Historical DASP: corr. 0.35 + stage constraint,0.5671,0.5226,0.4286,0.2857
+Correlation 0.25 + stage constraint,0.5983,0.5489,0.3143,0.1429
+Correlation 0.45 + stage constraint,0.4941,0.4265,0.3429,0.2857
+"Correlation 0.35, no stage constraint",0.5391,0.4988,0.4571,0.4286
