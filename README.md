@@ -8,14 +8,14 @@ This repository is being curated during peer review and is intended for public r
 
 ## Scope
 
-The repository supports the manuscript's post-review reproducibility package, including:
-
-- the historical Fold-0 Evidence-Gated Model Promotion (EGMP) evidence boundary;
-- the parameter-matched Mean/Mean capacity control (R3);
+The repository supports:
+- historical Fold-0 Evidence-Gated Model Promotion (EGMP) evidence;
+- parameter-matched capacity control (R3);
 - same-protocol Fold-0 baselines (R4);
 - post-review cross-fold evaluation on outer folds 1–4 (R5);
 - promotion-gate sensitivity, graph sensitivity, and component ablation (R6);
-- frozen configuration files and derived result tables where redistribution is permitted.
+- reusable core MS-Res-STGAT source code and lightweight tests;
+- frozen/publication-facing configurations and derived result tables where redistribution is permitted.
 
 ## Important evidence boundary
 
@@ -34,29 +34,27 @@ The five deterministic seeds `{11, 22, 33, 44, 55}` are computational-stability 
 ├── README.md
 ├── REPRODUCIBILITY.md
 ├── DATA_POLICY.md
-├── .gitignore
-├── environment/
-│   └── README.md
+├── VALIDATION_STATUS.md
+├── pyproject.toml
+├── LICENSE
 ├── configs/
-│   ├── R3_CAPACITY_CONTROL_FREEZE.yaml
-│   ├── R4_BASELINE_BENCHMARK_FREEZE.yaml
-│   └── R5_CROSSFOLD_FREEZE.yaml
 ├── results/
-│   ├── r3_capacity/
-│   ├── r4_baselines/
-│   ├── r5_crossfold/
-│   └── r6_sensitivity_ablation/
-└── src/
-    └── README.md
+├── environment/
+├── scripts/
+├── src/iiot_msresstgat/
+├── tests/
+└── review_experiments/
 ```
 
 ## Data availability
 
-The SWaT A1/A2 data are subject to the dataset provider's access and licensing conditions and are **not redistributed** in this repository. Users must obtain the dataset from the authorized provider and comply with its license.
+The SWaT A1/A2 data are subject to the dataset provider's access and licensing conditions and are **not redistributed**. Users must obtain authorized access from the provider and comply with the applicable license.
 
-## Code availability
+## Code status during review
 
-During peer review, the repository remains private while the frozen experimental code and execution adapters are curated into a publication-ready layout. The public release will include the non-proprietary reproducibility code, configuration artifacts, and derived result tables needed to reproduce the manuscript's reported analyses, subject to the SWaT license.
+The reusable core project code and tests have been copied from the version-controlled project archive into this private repository.
+
+Post-review R3–R6 execution used additional role-isolation, authorization, and audit controllers. Those exact controllers were tightly bound to machine-local paths and SHA-256 code bundles. They are being curated separately so that no machine-specific paths are published and no modified file is misrepresented as the exact hashed execution artifact. Frozen configs and manuscript-facing result summaries are already retained here.
 
 ## Manuscript-level headline results
 
