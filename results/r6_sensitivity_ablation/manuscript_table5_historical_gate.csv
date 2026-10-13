@@ -1,0 +1,5 @@
+criterion,required,observed,status
+mean_pr_gain,0.03,0.138,Pass
+worst_pr_gain,0.05,0.1669,Pass
+mean_event_recall,0.6,0.4286,Fail
+worst_event_recall,0.5,0.2857,Fail
