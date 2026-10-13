@@ -1,0 +1,5 @@
+variant,parameters,mean_pr_auc,worst_pr_auc,mean_event_recall,worst_event_recall
+Full DASP,69953,0.5671,0.5226,0.4286,0.2857
+No residual connection,69953,0.5839,0.5208,0.3714,0.2857
+Single-scale k=5,44609,0.5472,0.5021,0.2857,0.2857
+Temporal-only / no GAT,52801,0.3659,0.354,0.1714,0
