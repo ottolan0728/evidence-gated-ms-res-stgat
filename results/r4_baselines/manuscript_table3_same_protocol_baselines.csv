@@ -1,0 +1,8 @@
+model,parameters,mean_pr_auc,worst_pr_auc,mean_event_recall,worst_event_recall
+TCN,22273,0.5784,0.5395,0.2571,0.1429
+DASP,69953,0.5671,0.5226,0.4286,0.2857
+GATv2,17089,0.4825,0.4307,0.2286,0.1429
+RandomForest,,0.4644,0.4404,0.1714,0.1429
+MatchedMeanMean,69953,0.4588,0.4108,0.2857,0.1429
+USAD,723271,0.4371,0.3359,0.4000,0.2857
+OriginalMeanMean,32769,0.4291,0.3556,0.2286,0.1429
