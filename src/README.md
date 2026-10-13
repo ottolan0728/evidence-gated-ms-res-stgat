@@ -1,12 +1,9 @@
-# Source Code Curation Status
+# Source Code
 
-The manuscript experiments were executed through a version-controlled, audit-oriented workflow with stage-specific runners, role guards, frozen configurations, and execution manifests.
+`src/iiot_msresstgat/` contains the reusable core implementation recovered directly from the version-controlled project repository used for the manuscript workflow.
 
-This private repository is currently being curated for publication. Source code will be added only after:
-- removal of machine-specific absolute paths;
-- removal of licensed SWaT data references that would redistribute data;
-- consolidation of stage-specific compatibility adapters;
-- verification that the released code reproduces the manuscript-level endpoint definitions;
-- retention of the historical/post-review evidence boundary.
+The package includes data handling, graph construction, MS-Res-STGAT model definitions, training/evaluation helpers, threshold-policy logic, reproducibility helpers, and supporting experiment utilities.
 
-No unverified code is being reconstructed solely from the manuscript text.
+Post-review R3–R6 execution added additional role-isolation, fail-closed guards, capacity-matched controls, same-protocol baseline adapters, and cross-fold resource controls. Those execution-specific controllers are documented separately under `review_experiments/` while they are curated for public release.
+
+Raw SWaT data are not included.
