@@ -14,8 +14,9 @@ The repository supports:
 - same-protocol Fold-0 baselines (R4);
 - post-review cross-fold evaluation on outer folds 1–4 (R5);
 - promotion-gate sensitivity, graph sensitivity, and component ablation (R6);
-- reusable core MS-Res-STGAT source code and lightweight tests;
-- frozen/publication-facing configurations and derived result tables where redistribution is permitted.
+- reusable core MS-Res-STGAT source code and tests;
+- a path-neutral publication reproduction wrapper for R3–R6;
+- publication-facing configurations, environment documentation, and derived result tables where redistribution is permitted.
 
 ## Important evidence boundary
 
@@ -35,6 +36,7 @@ The five deterministic seeds `{11, 22, 33, 44, 55}` are computational-stability 
 ├── REPRODUCIBILITY.md
 ├── DATA_POLICY.md
 ├── VALIDATION_STATUS.md
+├── PUBLIC_RELEASE_CHECKLIST.md
 ├── pyproject.toml
 ├── LICENSE
 ├── configs/
@@ -46,15 +48,32 @@ The five deterministic seeds `{11, 22, 33, 44, 55}` are computational-stability 
 └── review_experiments/
 ```
 
+## Reproduction entry point
+
+A path-neutral publication reproduction wrapper is available at:
+
+`review_experiments/reproduce_post_review.py`
+
+It supports R3, R4, R5, R6C, and R6D using explicit command-line paths and role-isolated train/validation shards. Test/reserved roles are not accepted.
+
+See:
+- `review_experiments/REPRODUCTION.md`
+- `REPRODUCIBILITY.md`
+- `environment/ENVIRONMENT_STATUS.md`
+
+The wrapper is intentionally labeled as a **publication reproduction wrapper**. It is not represented as the byte-identical historical peer-review controller, because the historical controllers were bound to machine-local paths, authorization artifacts, and SHA-256 code bundles.
+
 ## Data availability
 
 The SWaT A1/A2 data are subject to the dataset provider's access and licensing conditions and are **not redistributed**. Users must obtain authorized access from the provider and comply with the applicable license.
 
-## Code status during review
+## Environment status
 
-The reusable core project code and tests have been copied from the version-controlled project archive into this private repository.
+An exact historical R3–R6 dependency lock is not fabricated. The repository provides a compatibility specification in `pyproject.toml` and a runtime-capture utility:
 
-Post-review R3–R6 execution used additional role-isolation, authorization, and audit controllers. Those exact controllers were tightly bound to machine-local paths and SHA-256 code bundles. They are being curated separately so that no machine-specific paths are published and no modified file is misrepresented as the exact hashed execution artifact. Frozen configs and manuscript-facing result summaries are already retained here.
+`environment/capture_environment.py`
+
+Before public release, the authors will capture and verify a publication reproduction environment and run the full PyTorch/PyTorch-Geometric test suite.
 
 ## Manuscript-level headline results
 
@@ -70,6 +89,10 @@ Post-review same-protocol Fold-0 benchmark:
 - highest mean constrained event recall: DASP (`0.4286`)
 
 These endpoints are intentionally reported separately.
+
+## Review-stage status
+
+The repository is suitable for **private peer-review use**. Before changing visibility to Public, complete the checks in `PUBLIC_RELEASE_CHECKLIST.md`.
 
 ## Contact
 
