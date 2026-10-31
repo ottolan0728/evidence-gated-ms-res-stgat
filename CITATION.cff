@@ -1,7 +1,9 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the associated IEEE Access article."
+message: "If you use this software or reproducibility package, please cite the associated IEEE Access article."
 title: "Evidence-Gated MS-Res-STGAT for Industrial Time-Series Anomaly Detection"
 type: software
+version: 1.0.0
+date-released: 2026-10-31
 authors:
   - family-names: Tseng
     given-names: Chun-Jan
@@ -14,3 +16,17 @@ authors:
 year: 2026
 repository-code: "https://github.com/ottolan0728/evidence-gated-ms-res-stgat"
 license: MIT
+preferred-citation:
+  type: article
+  title: "Evidence-Gated MS-Res-STGAT for Industrial Time-Series Anomaly Detection"
+  authors:
+    - family-names: Tseng
+      given-names: Chun-Jan
+    - family-names: Su
+      given-names: Yi-Kai
+    - family-names: Shih
+      given-names: Yu-Ting
+    - family-names: Chang
+      given-names: Ming-Han
+  journal: "IEEE Access"
+  year: 2026
