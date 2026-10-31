@@ -1,23 +1,36 @@
 # Public Release Checklist
 
-Keep this repository **Private** during peer review unless the authors intentionally decide otherwise.
+The associated IEEE Access manuscript was accepted on 31 October 2026.
 
-Before changing repository visibility to Public:
+## Completed publication-facing checks
 
-- [ ] Full test suite passes in a compatible PyTorch/PyTorch-Geometric environment.
-- [ ] `environment/capture_environment.py` has generated `environment/runtime_inventory_publication.json`.
-- [ ] A publication reproduction dependency lock has been generated and clearly labeled as such.
-- [ ] At least one authorized-data path-neutral reproduction run completes successfully.
-- [ ] Reproduction output agrees with the expected endpoint implementation and role boundaries.
-- [ ] No SWaT raw data or processed licensed role shards are committed.
-- [ ] No model checkpoint is committed unless redistribution is explicitly permitted.
-- [ ] No local absolute paths, credentials, API tokens, emails containing secrets, or private authorization artifacts are committed.
-- [ ] README, DATA_POLICY, REPRODUCIBILITY, CITATION.cff, and LICENSE are final.
-- [ ] Repository URL in the accepted manuscript matches this repository.
-- [ ] Release tag/version is created only after the final manuscript version is frozen.
+- [x] Repository URL in the accepted manuscript matches this repository.
+- [x] README, DATA_POLICY, REPRODUCIBILITY, CITATION.cff, and LICENSE are present.
+- [x] Core source provenance is documented.
+- [x] Core Python source compiles.
+- [x] Dependency-light test subset passed (20 tests).
+- [x] Path-neutral reproduction wrapper compiles and exposes a working CLI.
+- [x] Accepted-manuscript result tables are included.
+- [x] Historical and post-review evidence are explicitly separated.
+- [x] No SWaT raw data or processed licensed role shards are intentionally committed.
+- [x] No model checkpoints are intentionally committed.
+- [x] No publication-facing local absolute paths, credentials, API tokens, or private authorization artifacts were found in the curation scan.
+- [x] Threshold results are explicitly described as optimized validation operating-point evidence rather than untouched operational test estimates.
+
+## Reproduction items that remain environment-dependent
+
+- [ ] Full PyTorch/PyTorch-Geometric test suite on an author-controlled compatible environment.
+- [ ] Authorized-data end-to-end smoke reproduction through the path-neutral wrapper.
+- [ ] Optional capture of a publication reproduction environment lock.
+
+These items are **not** represented as historical evidence and are not required to interpret the accepted manuscript. They may be added later as repository maintenance improvements.
 
 ## Important provenance rule
 
 Do not describe a future publication reproduction dependency lock as the byte-identical historical R3–R6 environment unless an independently verifiable historical lock is recovered.
 
 Do not describe the path-neutral wrapper as the exact historical authorization controller. It is a curated publication reproduction entry point.
+
+## Release status
+
+**Approved for public release with documented reproducibility limitations.**
