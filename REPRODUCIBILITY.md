@@ -30,6 +30,12 @@ For every model–seed evaluation, the common endpoint evaluates 501 score/quant
 
 If no candidate is feasible, the constraints are not relaxed.
 
+### Important interpretation boundary
+
+The operating threshold is selected and evaluated on the same validation-event set. The reported constrained event-recall and alarm-burden quantities therefore represent **optimized validation operating-point evidence**. They are not independent operational test estimates.
+
+A deployment-oriented confirmation would require threshold selection on a separate calibration partition followed by evaluation on untouched events. No such operational claim is made by this repository or the accepted manuscript.
+
 ## Historical promotion criteria
 
 - mean macro scenario PR-AUC gain >= 0.03;
@@ -45,7 +51,7 @@ Seeds: `11, 22, 33, 44, 55`
 
 Seeds quantify computational stability within a fixed partition. They are not independent statistical replicates.
 
-In R5, the outer fold is the partition-replication unit. The rotating outer folds reuse the same SWaT process/attack corpus and are therefore not independent external datasets.
+In R5, the outer fold is the partition-replication unit. The rotating outer folds reuse the same SWaT process/attack corpus and are therefore not independent external datasets. Reported differences are interpreted descriptively rather than as population-level significance tests.
 
 ## Reproduction wrapper
 
@@ -68,14 +74,18 @@ See `review_experiments/REPRODUCTION.md` for usage.
 
 ## Environment
 
-The repository does not fabricate an exact historical dependency lock. The current evidence supports a compatibility specification and Python-3.12-era historical artifacts, but not a complete trustworthy historical `pip freeze` for all executed R3–R6 runs.
+The repository does not fabricate an exact historical dependency lock. The retained evidence supports a compatibility specification and Python-3.12-era historical artifacts, but not a complete trustworthy historical `pip freeze` for all executed R3–R6 runs.
 
 Use:
 
 `environment/capture_environment.py`
 
-to capture an exact publication-reproduction runtime before public release. See `environment/ENVIRONMENT_STATUS.md`.
+to capture an exact publication-reproduction runtime. See `environment/ENVIRONMENT_STATUS.md`.
 
 ## Data boundary
 
 The SWaT A1/A2 raw data, role-isolated processed shards, raw windows, and checkpoints are not redistributed. Users must obtain authorized SWaT access separately.
+
+## Publication status
+
+The associated IEEE Access manuscript was accepted on 31 October 2026. DOI and final citation metadata will be added after assignment by IEEE.
