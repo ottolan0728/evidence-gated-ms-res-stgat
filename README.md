@@ -1,10 +1,10 @@
 # Evidence-Gated MS-Res-STGAT for Industrial Time-Series Anomaly Detection
 
-Private reproducibility repository for the IEEE Access manuscript:
+Reproducibility repository for the accepted IEEE Access manuscript:
 
 **Evidence-Gated MS-Res-STGAT for Industrial Time-Series Anomaly Detection**
 
-This repository is being curated during peer review and is intended for public release upon publication.
+**Status:** Accepted for publication in IEEE Access on 31 October 2026. This repository is the publication-facing reproducibility package associated with the accepted article.
 
 ## Scope
 
@@ -27,6 +27,8 @@ The historical Fold-0 decision remains:
 Reviewer-requested R3–R6 analyses are **post-review evidence**. They characterize capacity, baseline competitiveness, partition sensitivity, gate sensitivity, graph assumptions, and component dependence, but do not retroactively alter the historical Gate-4B decision.
 
 The five deterministic seeds `{11, 22, 33, 44, 55}` are computational-stability repetitions, not independent population samples.
+
+The alarm-constrained threshold procedure is optimized on validation events. Accordingly, the reported constrained event-recall and alarm-burden quantities should be interpreted as **optimized validation operating-point evidence**, not untouched operational test estimates.
 
 ## Repository layout
 
@@ -69,11 +71,12 @@ The SWaT A1/A2 data are subject to the dataset provider's access and licensing c
 
 ## Environment status
 
-An exact historical R3–R6 dependency lock is not fabricated. The repository provides a compatibility specification in `pyproject.toml` and a runtime-capture utility:
+The repository provides:
+- a compatibility specification in `pyproject.toml`;
+- `environment/capture_environment.py` for recording an exact reproduction runtime;
+- explicit documentation separating a publication reproduction environment from the unrecovered byte-identical historical R3–R6 environment.
 
-`environment/capture_environment.py`
-
-Before public release, the authors will capture and verify a publication reproduction environment and run the full PyTorch/PyTorch-Geometric test suite.
+No historical package pins are fabricated.
 
 ## Manuscript-level headline results
 
@@ -88,11 +91,11 @@ Post-review same-protocol Fold-0 benchmark:
 - highest mean PR-AUC: TCN (`0.5784`)
 - highest mean constrained event recall: DASP (`0.4286`)
 
-These endpoints are intentionally reported separately.
+Model leadership changes across endpoints and outer folds; the repository does not support a universal-superiority claim.
 
-## Review-stage status
+## Publication status
 
-The repository is suitable for **private peer-review use**. Before changing visibility to Public, complete the checks in `PUBLIC_RELEASE_CHECKLIST.md`.
+The associated article has been accepted by IEEE Access. The repository is maintained as the public reproducibility companion for the accepted work. DOI and final bibliographic metadata will be added when assigned by IEEE.
 
 ## Contact
 
